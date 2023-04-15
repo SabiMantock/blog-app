@@ -56,9 +56,9 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Initialize your project with Git**
-- **Make sure that your project has Postgres database set up**
-- **Build your project schema**
+- [ ] **Added validations For the User model**
+- [ ] **Added validations For the post model**
+- [ ] **Add unit specs for all of your models' methods and validations.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -150,10 +150,7 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Create model classes for all entities as shown in the ERD diagram**
-- [ ] **Set up associations between models.**
-- [ ] **Use models to insert data**
-- [ ] **Create custom methods**
+- [ ] **Add Controllers**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
