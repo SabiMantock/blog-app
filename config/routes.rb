@@ -5,12 +5,15 @@ Rails.application.routes.draw do
   # root "articles#index"
    root "users#index"
 
-  get 'posts/new', to: 'posts#new'
+  get 'posts/:post_id/comments/new', to: 'comments#new'
+post 'posts/:post_id/comments', to: 'comments#create'
+post 'posts/:post_id', to: 'likes#create'
   post 'posts', to: 'posts#create'
-  post 'likes/:post_id', to: 'likes#create'
-  post 'comments/:post_id', to: 'comments#create'
   
   resources :users, only: [:index, :show] do
-    resources :posts, only: [:index, :show]
+    resources :posts, only: [:index, :show] do
+     resources :comments, only: [:new, :create, :destroy]
+      resources :likes, only: [:create]
+    end
   end
 end

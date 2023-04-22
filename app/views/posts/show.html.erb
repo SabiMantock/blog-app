@@ -7,6 +7,7 @@
       <div>
         <span>Comments: <%= @post.comments_counter %></span>
         <span>, Likes: <%= @post.likes_counter %></span>
+       <%= button_to "Like", user_post_likes_path(@user, @post), method: :post %>
       </div>
     </div>
     <div>
@@ -23,6 +24,8 @@
     <% end %>
   </div>
   <div class="text-center p-4">
+  <h3>add like</h3>
+  
      <h3>Add a comment: </h3>
        <%= form_for [@post, Comment.new], url: "/comments/#{@post.id}" do |form| %>
         <div>
