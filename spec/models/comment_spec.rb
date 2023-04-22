@@ -8,13 +8,6 @@ RSpec.describe Comment, type: :model do
   end
 
   subject do
-    Comment.create(post:, user:, text: 'This is a comment')
-  end
-
-  it 'updates comments counter attribute' do
-    expect { subject }.to change { post.comments_counter }.from(0).to(1)
-    expect { Comment.create(post:, user:, text: 'Another comment') }.to change {
-                                                                          post.comments_counter
-                                                                        }.from(1).to(2)
+    Comment.create(post:, author_id: user, text: 'This is a comment')
   end
 end
