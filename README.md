@@ -54,9 +54,10 @@
 
 ### Key Features <a name="key-features"></a>
 
-- [ ] **Added validations For the User model**
-- [ ] **Added validations For the post model**
-- [ ] **Add unit specs for all of your models' methods and validations.**
+- Create a comment
+- Create a post
+- Create a like
+- Create a user
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -140,7 +141,7 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Add Controllers**
+- [ ] **integration specs for views and fix n+1 problems**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

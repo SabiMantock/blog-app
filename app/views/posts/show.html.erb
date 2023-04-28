@@ -20,6 +20,20 @@
         <span><%= comment.user.name %>:</span>
         <span><%= comment.text %></span>
       </div>
-    <% end %>
+  <% end %>
+  </div>
+  <div class="text-center p-4">
+  <h3>add like</h3>
+  <div class='flex'>
+   <%= button_to "Like", user_post_likes_path(@user, @post), method: :post, class: "btn btn-outline-secondary rounded-pill m-1 py-1 px-5" %>
+  </div>
+  
+     <h3>Add a comment: </h3>
+  <%= form_for [@post, Comment.new], url: user_post_comments_path(post_id: @post.id) do |form| %>
+  <div>
+    <%= form.text_area :text, placeholder: "Add comment", class: "form-control"%>
+  </div>
+    <%= form.submit "Add Comment", class: "btn btn-outline-secondary rounded-pill m-2" %>
+  <% end %>
   </div>
 </section>
