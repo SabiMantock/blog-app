@@ -7,7 +7,7 @@
         <h2 class="flex-grow-1"><%= user.name %></h2>
         <div class="d-flex justify-content-end">
           Number of post:
-          <%= user.posts_counter %>
+          <%= user.posts.count || 0 %>
         </div>
       </div>
     </a>
