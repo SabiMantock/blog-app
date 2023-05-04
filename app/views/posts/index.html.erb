@@ -1,9 +1,9 @@
 <h1>This is a list of all Posts written by <%= @user.name %></h1>
 
 <div class="d-flex align-items-center mb-3 gap-3">
-  <img src="<%= @user.photo%>" alt="user_image" class="border p-5 border-5" />
+  <img src="/assets/<%= @user.photo %>" class="border p-5 border-5" />
   <div class="border border-5 w-100 p-3">
-    <h2><%= @user.name %></h2>
+    <h2><%= @user.name%> </h2>
     <div class="d-flex justify-content-end">
       <p>Number of posts: <%= @user.posts.count || 0 %></p>
     </div>
@@ -12,14 +12,14 @@
 
 <section>
   <% @posts.each do |post| %>
-    <a href="<%= "/users/#{ @user.id }/posts/#{ post.id }" %>" class="text-decoration-none text-primary-emphasis">
+    <a href="<%= "/users/#{@user.id}/posts/#{post.id}" %>" class="text-decoration-none text-primary-emphasis">
       <div class="border border-5 gap-3">
         <h3>Post #<%= post.id %></h3>
         <p><%= post.text %></p>
 
         <div class="d-flex justify-content-end">
           <span>Comments: <%= "#{ post.comments_counter || 0 }"%></span>
-          <span>, Likes: <%= "#{ post.likes_counter || 0 }"%></span>
+          <span>Likes: <%= "#{ post.likes_counter || 0 }"%></span>
         </div>
       </div>
     </a>
@@ -34,6 +34,8 @@
       <% end %>
     </div>
   <% end %>
+
+  <button class="link-btn pagination" type="button">Pagination</button>
 </section>
 
 <div class="text-center p-4">
