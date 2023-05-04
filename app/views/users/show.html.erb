@@ -2,7 +2,8 @@
 
 <section class="d-flex align-items-center mb-3 gap-3">
   <div> 
-    <%= image_tag(@user.photo, class: "border p-5 border-5") %>
+    <%= image_tag("/assets/#{@user.photo}", class: "border p-5 border-5") %>
+    <%=@user.photo%>
   </div>
   <div class="border border-5 w-100 p-3">
     <h2><%= @user.name %></h2>
@@ -19,15 +20,17 @@
 
 <div>
   <% @user.recent_posts.each do |post| %>
-    <div class="border border-5 mx-auto w-100 p-3 mb-3">
-      <h2>Post #<%= post.id %></h2>
-      <p><%= post.title %></p>
-      <p><%= post.text %></p>
-      <div class="d-flex justify-content-end">
-        <span>Comments: <%= "#{post.comments_counter || 0}" %></span>
-        <span>, Likes: <%= "#{post.likes_counter || 0}" %></span>
+       <a href="<%= "/users/#{@user.id}/posts/#{post.id}" %>" class="text-decoration-none text-primary-emphasis">
+      <div class="border border-5 gap-3">
+        <h3>Post #<%= post.id %></h3>
+        <p><%= post.text %></p>
+
+        <div class="d-flex justify-content-end">
+          <span>Comments: <%= "#{ post.comments_counter || 0 }"%></span>
+          <span>, Likes: <%= "#{ post.likes_counter || 0 }"%></span>
+        </div>
       </div>
-    </div>
+    </a>
   <% end %>
 </div>
 
