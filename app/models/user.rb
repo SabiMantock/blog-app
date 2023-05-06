@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
          :confirmable
-         has_many :posts, foreign_key: 'user_id', class_name: 'Post'
+  has_many :posts, foreign_key: 'user_id', class_name: 'Post'
   has_many :comments, foreign_key: 'user_id', class_name: 'Comment'
 
   validates :name, presence: true
@@ -21,5 +21,4 @@ class User < ApplicationRecord
   def recent_posts
     posts.order(created_at: :desc).limit(3)
   end
-  
 end
