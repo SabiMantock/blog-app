@@ -7,6 +7,7 @@ ruby '3.2.1'
 gem 'rails', '~> 7.0.4', '>= 7.0.4.3'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
+gem 'devise'
 gem 'sprockets-rails'
 
 # Use postgresql as the database for Active Record
@@ -20,6 +21,7 @@ gem 'importmap-rails'
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem 'turbo-rails'
+
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem 'stimulus-rails'
@@ -56,6 +58,8 @@ group :development, :test do
 end
 
 group :development do
+  gem 'letter_opener'
+
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem 'web-console'
 
