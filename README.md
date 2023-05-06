@@ -115,13 +115,10 @@ To run tests, run the following command:
 
 You can deploy this project using:
 
-<!--
-Example:
-
 ```sh
-
+ Render
+ Heroku
 ```
- -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -134,18 +131,6 @@ Example:
 - GitHub: [@SabiMantock](https://github.com/SabiMantock)
 - Twitter: [@IamSabiMantock](https://twitter.com/IamSabiMantock)
 - LinkedIn: [Sabi Mantock](https://linkedin.com/in/sabi-mantock)
-
-👤 **Salwa Ballouti**:
-
-- GitHub: [@Salwa99](https://github.com/Salwa99)
-- Twitter: [@SalwaBallouti](https://twitter.com/salwa_ballouti)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/salwa-ballouti)
-
-👤 **Billal Chami**:
-
-- GitHub: [@githubhandle](https://github.com/bill7pearl)
-- Twitter: [@twitterhandle](https://twitter.com/BillChami)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/billal-chami-263497194/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
